@@ -27,7 +27,8 @@ jobs:
     - name: Run test2
       run: |
         cd 2wordladders
-        ./check_solution.sh
+        javac WordLadders.java
+        ./check_solution.sh java WordLadders
 
   test3:
     runs-on: ubuntu-latest
