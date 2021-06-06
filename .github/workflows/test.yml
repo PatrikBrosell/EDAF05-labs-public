@@ -1,0 +1,71 @@
+name: Test
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+
+jobs:
+  test1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Run test1
+      run: |
+        cd 1stablemarriage
+        ./check_solution.sh
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run test2
+      run: |
+        cd 2wordladders
+        ./check_solution.sh
+
+  test3:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run test3
+      run: |
+        cd 3makingfriends
+        ./check_solution.sh
+
+  test4:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run test4
+      run: |
+        cd 4closestpair
+        ./check_solution.sh
+
+  test5:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run test5
+      run: |
+        cd 5gorilla
+        ./check_solution.sh
+
+  test6:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Run test6
+      run: |
+        cd 6railwayplanning
+        ./check_solution.sh
+
